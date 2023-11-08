@@ -1,7 +1,7 @@
-const { nanoid } = require("nanoid")
-const url = require("../models/url")
+import { nanoid } from "nanoid"
+import url from "../models/url"
 
-const newUrl = async (req, res) => {
+const newUrl = async (req: { body: any }, res: any ) => {
   const body = req.body
 
   if(!body.url) return res.status(400).send({error: "Invalid url"})
@@ -15,6 +15,4 @@ const newUrl = async (req, res) => {
   return res.status(200).json({id: shortId})
 }
 
-module.exports = {
-  newUrl
-}
+export default newUrl

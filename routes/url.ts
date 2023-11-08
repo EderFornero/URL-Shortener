@@ -1,7 +1,7 @@
-const express = require("express")
-const { newUrl } = require("../controllers/url")
+import express from "express"
+import newUrl from "../controllers/url"
 
 const router = express.Router()
 router.post("/", newUrl)
 
-module.exports = router
+export default router

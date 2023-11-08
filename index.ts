@@ -1,8 +1,13 @@
-const express = require("express")
-export {express}
+import express from "express";
+
 const app = express()
 const port = 3000
-const urlRoute = require("./routes/url")
+
+import { connectToMongoDB } from "./connect"
+connectToMongoDB("mongodb://127.0.0.1:27017/url_shortener")
+.then(() => console.log("Mongo db connected"))
+import urlRoute from "./routes/url"
+
 
 app.use("/url", urlRoute)
 
