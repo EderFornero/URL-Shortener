@@ -16,7 +16,7 @@ Before you begin, ensure you have met the following requirements:
 ## Installation
 1. Clone this repository to your local machine:
    ```bash
-   git clone https://github.com/your-username/url-shortener.git
+   git clone https://github.com/EderFornero/url-shortener.git
 2. Change directory to the project folder:
    cd url-shortener
 3. Install project dependencies using pnpm:
